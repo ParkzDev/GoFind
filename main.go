@@ -50,7 +50,9 @@ func main() {
 			fmt.Println("==================================================================")
 			choice = 3
 		} else {
-			exec.Command("explorer", dirOpen).Start()
+			if filesFind > 0 {
+				exec.Command("explorer", dirOpen).Start()
+			}
 			fmt.Println("==================================================================")
 			fmt.Printf("\tSe encontraron %d archivos.\n", filesFind)
 			fmt.Println("==================================================================")
